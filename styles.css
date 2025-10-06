@@ -1,0 +1,102 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --accent-2: #06b6d4;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: linear-gradient(180deg, var(--bg), #111827);
+  color: var(--text);
+}
+
+.app-header, .app-footer {
+  padding: 16px 24px;
+  background: rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+.app-footer { top: auto; bottom: 0; position: sticky; }
+
+h1, h2, h3 { margin: 0 0 12px; }
+main { padding: 24px; max-width: 960px; margin: 0 auto 80px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.score-banner {
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.quiz-form label {
+  display: block;
+  padding: 8px 10px;
+  margin: 6px 0;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.question { margin-bottom: 18px; }
+.timer { color: var(--muted); margin-top: 6px; }
+
+.actions { display: flex; gap: 12px; margin-top: 12px; }
+.actions button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--accent-2);
+  color: #001018;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.actions button#resetStaticQuiz { background: #374151; color: #e5e7eb; }
+
+.config-form .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.config-form label { display: grid; gap: 6px; }
+.config-form input, .config-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+.quiz-container { margin-top: 16px; }
+.quiz-item {
+  border-top: 1px dashed rgba(255,255,255,0.12);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+.chip {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(255,255,255,0.08);
+  color: var(--muted);
+}
+.error { color: var(--danger); }
+

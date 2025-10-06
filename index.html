@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini-projet 1 - QCM JavaScript</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>QCM JavaScript</h1>
+    <div id="scoreBanner" class="score-banner" aria-live="polite">Score: 0</div>
+  </header>
+
+  <main>
+    <section id="part1" class="card">
+      <h2>Partie 1 — QCM statique</h2>
+      <p>Répondez aux questions suivantes. Le score s'affichera en haut de la page.</p>
+      <form id="staticQuizForm" class="quiz-form">
+        <div class="question" data-correct="b">
+          <h3>1) Quel est le résultat de 2 + 2 ?</h3>
+          <label><input type="radio" name="q1" value="a" /> 3</label>
+          <label><input type="radio" name="q1" value="b" /> 4</label>
+          <label><input type="radio" name="q1" value="c" /> 5</label>
+          <div class="timer" data-seconds="20">Temps restant: <span class="time">20</span>s</div>
+        </div>
+
+        <div class="question" data-correct="c">
+          <h3>2) La méthode Array.prototype.map retourne :</h3>
+          <label><input type="radio" name="q2" value="a" /> Le même tableau modifié</label>
+          <label><input type="radio" name="q2" value="b" /> Rien (undefined)</label>
+          <label><input type="radio" name="q2" value="c" /> Un nouveau tableau</label>
+          <div class="timer" data-seconds="20">Temps restant: <span class="time">20</span>s</div>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="submitStaticQuiz">Calculer le score</button>
+          <button type="reset" id="resetStaticQuiz">Réinitialiser</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="part2" class="card">
+      <h2>Partie 2 — QCM via Open Trivia DB</h2>
+      <p>Configurez votre quiz puis lancez-le.</p>
+
+      <form id="configForm" class="config-form">
+        <div class="grid">
+          <label>
+            Nombre de questions
+            <input type="number" id="amount" min="1" max="50" value="5" required />
+          </label>
+
+          <label>
+            Catégorie
+            <select id="category"></select>
+          </label>
+
+          <label>
+            Difficulté
+            <select id="difficulty">
+              <option value="">Toutes</option>
+              <option value="easy">Facile</option>
+              <option value="medium">Moyenne</option>
+              <option value="hard">Difficile</option>
+            </select>
+          </label>
+
+          <label>
+            Type
+            <select id="type">
+              <option value="">Tous</option>
+              <option value="multiple">Choix multiples</option>
+              <option value="boolean">Vrai/Faux</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="startApiQuiz">Lancer le quiz</button>
+        </div>
+      </form>
+
+      <div id="apiQuizContainer" class="quiz-container" hidden></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Mini-projet DBJS — Open Trivia DB: <a href="https://opentdb.com" target="_blank" rel="noreferrer noopener">opentdb.com</a></small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
