@@ -17,7 +17,7 @@
 
 ## Développeurs
 - Aymane BAKACHE @aymanebakache .
-- Marouane BAKRIM .
+- Marouane BAKRIM @Marouanebakrim .
 
 ## Encadrement
 -Prof : M.BENTAJER
