@@ -16,8 +16,8 @@
 - Le score s'affiche dans la bannière en haut et la page défile automatiquement vers le haut.
 
 ## Développeurs
--Aymane BAKACHE @aymanebakache
--Marouane BAKRIM 
+- Aymane BAKACHE @aymanebakache .
+- Marouane BAKRIM .
 
 ## Encadrement
 -Prof : M.BENTAJER
